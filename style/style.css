@@ -1,0 +1,146 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	/* font-size: 10px; */
+	/* 10px / 16px = 0.625 = 62.5% */
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+main {
+	background-color: hsl(233, 47%, 7%);
+	height: 100rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.content-main {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+h1 {
+	color: hsl(0, 0%, 100%);
+	font-size: 4.2rem;
+	font-family: "Inter", sans-serif;
+	margin-bottom: 4rem;
+}
+
+.img1 {
+	background-image: linear-gradient(
+			to right bottom,
+			rgba(94, 23, 139, 0.674),
+			rgba(110, 24, 164, 0.701)
+		),
+		url("../img/image-header-desktop.jpg");
+	background-size: cover;
+	background-position: center;
+}
+
+.ins {
+	color: hsl(277, 64%, 61%);
+}
+
+.testimonial {
+	background-color: hsl(244, 38%, 16%);
+	width: 60rem;
+	height: 54rem;
+	padding: 8rem;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.description {
+	color: hsla(0, 0%, 100%, 0.75);
+	font-size: 1.5rem;
+	font-family: "Lexend Deca", sans-serif;
+	font-weight: 400;
+	line-height: 1.8;
+
+	margin-bottom: 10rem;
+	padding-right: 6rem;
+}
+
+.stats {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+
+	gap: 8rem;
+}
+
+.number {
+	color: hsl(0, 0%, 100%);
+	font-family: "Inter", sans-serif;
+	font-size: 2.6rem;
+	font-weight: 700;
+	padding-bottom: 1rem;
+}
+
+.number-up {
+	text-transform: uppercase;
+}
+
+.heading-bottom {
+	font-family: "Lexend Deca", sans-serif;
+	color: hsla(0, 0%, 100%, 0.75);
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	font-weight: 400;
+	font-size: 1.2rem;
+}
+
+@media (max-width: 24em) {
+	.content-main {
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+
+	h1 {
+		font-size: 2.8rem;
+	}
+
+	.img1 {
+		grid-column: 1;
+		order: 1;
+		background-image: linear-gradient(
+				to right bottom,
+				rgba(94, 23, 139, 0.674),
+				rgba(110, 24, 164, 0.701)
+			),
+			url("../img/image-header-desktop.jpg");
+		background-size: cover;
+		background-position: center;
+		height: 26rem;
+	}
+
+	.testimonial {
+		grid-column: 1;
+		order: 2;
+		width: 33rem;
+		height: 60rem;
+		padding: 4rem;
+		text-align: center;
+	}
+
+	.description {
+		padding-right: 0;
+		font-size: 1.4rem;
+		margin-bottom: 4rem;
+	}
+
+	.stats {
+		display: flex;
+		flex-direction: column;
+		gap: 4rem;
+	}
+}
